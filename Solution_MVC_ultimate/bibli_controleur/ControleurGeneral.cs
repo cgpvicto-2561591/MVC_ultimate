@@ -7,13 +7,17 @@ namespace Bibli_Controleur
         private readonly CombineLacZone _modeleLacZone;
         private readonly ZoneLac _modeleZone;
         private readonly ILacZone _vueLacZone;
+        private readonly NumZone _modeleNumZone;
 
-        public ControleurGeneral(CombineLacZone modeleLacZone, ZoneLac modeleZone, ILacZone vueLacZone)
+        public ControleurGeneral(CombineLacZone modeleLacZone, ZoneLac modeleZone, ILacZone vueLacZone, NumZone modeleNumZone)
         {
             _modeleLacZone = modeleLacZone;
             _modeleZone = modeleZone;
             _vueLacZone = vueLacZone;
+            _modeleNumZone = modeleNumZone;
 
+            _modeleNumZone.EventNumZone += EventNumZoneMethod;
+            _vueLacZone.NumValueChanged += NumZoneMethod;
             _vueLacZone.ChangementVueLacZone += UpdaterModele;
             _modeleLacZone.ChangementModeleList += UpdaterVue;
             _vueLacZone.ZoneInitiation += InitierZone;
@@ -24,6 +28,25 @@ namespace Bibli_Controleur
             InitierZone(this, EventArgs.Empty);
         }
         /// <summary>
+        /// Renvoie la valeur dans le comboboxZone
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void EventNumZoneMethod(object sender, EventArgs e)
+        {
+            _vueLacZone.NumUpdate(_modeleNumZone.ToString());
+        }
+        /// <summary>
+        /// envoie la valeur au modeleNumZone
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void NumZoneMethod(object sender, EventArgs e)
+        {
+            int valeurint = (int)_vueLacZone.NumZone;
+            _modeleNumZone.getNumZone(valeurint);
+
+        }
         /// CLear la listbox avec CLearVue
         /// </summary>
         /// <param name="sender"></param>

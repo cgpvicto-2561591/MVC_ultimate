@@ -8,6 +8,8 @@ namespace MVC_ultimate
 
         public string NomZone => comboBoxZone.Text;
 
+        public decimal NumZone => numericUpDownZone.Value;
+
         public FormPecheur()
         {
             InitializeComponent();
@@ -17,6 +19,7 @@ namespace MVC_ultimate
         public event EventHandler ChangementVueLacZone;
         public event EventHandler ZoneInitiation;
         public event EventHandler ClearLacZone;
+        public event EventHandler NumValueChanged;
 
         /// <summary>
         /// 
@@ -103,6 +106,21 @@ namespace MVC_ultimate
         private void buttonClearList_Click(object sender, EventArgs e)
         {
             ClearLacZone?.Invoke(this, EventArgs.Empty);
+        }
+
+        /// <summary>
+        /// envoie un event au controlleur quand la valeur change (du numericUpdownZone)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void numericUpDownZone_ValueChanged(object sender, EventArgs e)
+        {
+            NumValueChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void NumUpdate(string numValeur)
+        {
+            comboBoxZone.Text =  numValeur;
         }
     }
 }

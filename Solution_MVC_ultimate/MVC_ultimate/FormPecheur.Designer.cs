@@ -36,6 +36,9 @@
             labelChoixZone = new Label();
             labelChoixLac = new Label();
             buttonClearList = new Button();
+            numericUpDownZone = new NumericUpDown();
+            label1 = new Label();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownZone).BeginInit();
             SuspendLayout();
             // 
             // labelTitre
@@ -118,12 +121,33 @@
             buttonClearList.UseVisualStyleBackColor = false;
             buttonClearList.Click += buttonClearList_Click;
             // 
+            // numericUpDownZone
+            // 
+            numericUpDownZone.Font = new Font("Segoe UI", 18F);
+            numericUpDownZone.Location = new Point(695, 349);
+            numericUpDownZone.Name = "numericUpDownZone";
+            numericUpDownZone.Size = new Size(70, 47);
+            numericUpDownZone.TabIndex = 8;
+            numericUpDownZone.ValueChanged += numericUpDownZone_ValueChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            label1.Location = new Point(608, 355);
+            label1.Name = "label1";
+            label1.Size = new Size(81, 41);
+            label1.TabIndex = 9;
+            label1.Text = "num";
+            // 
             // FormPecheur
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
+            Controls.Add(numericUpDownZone);
             Controls.Add(buttonClearList);
             Controls.Add(labelChoixLac);
             Controls.Add(labelChoixZone);
@@ -134,6 +158,7 @@
             Controls.Add(labelTitre);
             Name = "FormPecheur";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)numericUpDownZone).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -148,5 +173,7 @@
         private Label labelChoixZone;
         private Label labelChoixLac;
         private Button buttonClearList;
+        private NumericUpDown numericUpDownZone;
+        private Label label1;
     }
 }

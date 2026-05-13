@@ -17,8 +17,9 @@ namespace MVC_ultimate
             ApplicationConfiguration.Initialize();
             FormPecheur vue = new FormPecheur();
             ZoneLac modeleZone = new ZoneLac();
+            NumZone modeleNumZone = new NumZone();
             CombineLacZone modeleLacZone = new CombineLacZone();
-            ControleurGeneral ctrl = new ControleurGeneral(modeleLacZone, modeleZone, vue);
+            ControleurGeneral ctrl = new ControleurGeneral(modeleLacZone, modeleZone, vue, modeleNumZone);
             Application.Run(vue);
         }
     }
