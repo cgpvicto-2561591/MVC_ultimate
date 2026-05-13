@@ -47,9 +47,9 @@
             labelTitre.Font = new Font("Segoe UI", 18F, FontStyle.Bold | FontStyle.Italic);
             labelTitre.Location = new Point(104, 24);
             labelTitre.Name = "labelTitre";
-            labelTitre.Size = new Size(112, 41);
+            labelTitre.Size = new Size(125, 41);
             labelTitre.TabIndex = 0;
-            labelTitre.Text = "Les lac";
+            labelTitre.Text = "Les lacs";
             // 
             // textBoxNomLac
             // 
@@ -95,9 +95,9 @@
             labelChoixZone.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             labelChoixZone.Location = new Point(493, 112);
             labelChoixZone.Name = "labelChoixZone";
-            labelChoixZone.Size = new Size(149, 20);
+            labelChoixZone.Size = new Size(147, 20);
             labelChoixZone.TabIndex = 5;
-            labelChoixZone.Text = "Choissisez une Zone";
+            labelChoixZone.Text = "Choissisez une zone";
             // 
             // labelChoixLac
             // 
@@ -157,7 +157,7 @@
             Controls.Add(textBoxNomLac);
             Controls.Add(labelTitre);
             Name = "FormPecheur";
-            Text = "Form1";
+            Text = "Formulaire de Pêche";
             ((System.ComponentModel.ISupportInitialize)numericUpDownZone).EndInit();
             ResumeLayout(false);
             PerformLayout();

@@ -23,7 +23,10 @@ namespace Bibli_Modele
         public NumZone()
         {
         }
-
+        /// <summary>
+        /// method qui va permettre de mettre a jour Numero
+        /// </summary>
+        /// <param name="valeur"></param>
         public void getNumZone(int valeur)
         {
             Numero = valeur;
@@ -35,7 +38,7 @@ namespace Bibli_Modele
         /// <returns></returns>
         public override string ToString()
         {
-            return $"Zone{_numero}";
+            return $"zone{_numero}";
         }
         /// <summary>
         /// get set _numero
