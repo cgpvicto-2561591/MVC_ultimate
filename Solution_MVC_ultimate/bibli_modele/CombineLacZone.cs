@@ -36,7 +36,13 @@ namespace Bibli_Modele
             ListCombine.Add(lac + ", " + zone);
             ChangementModeleList?.Invoke(this, EventArgs.Empty);
         }
-
+        /// <summary>
+        /// clear la listCombine
+        /// </summary>
+        public void CLearInfo()
+        {
+            ListCombine.Clear();
+        }
         /// <summary>
         /// get set _listCombine
         /// </summary>

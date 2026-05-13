@@ -6,7 +6,7 @@ namespace MVC_ultimate
     {
         public string NomLac => textBoxNomLac.Text;
 
-        public string NomZone => comboBoxZone.SelectedItem.ToString();
+        public string NomZone => comboBoxZone.Text;
 
         public FormPecheur()
         {
@@ -92,6 +92,7 @@ namespace MVC_ultimate
         public void ClearVueZone()
         {
             comboBoxZone.Items.Clear();
+
         }
         /// <summary>
         /// method quand le buttonCLearList recoit un click

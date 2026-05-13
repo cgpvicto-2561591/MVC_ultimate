@@ -30,6 +30,7 @@ namespace Bibli_Controleur
         /// <param name="e"></param>
         private void ClearList(object sender, EventArgs e)
         {
+            _modeleLacZone.CLearInfo();
             _vueLacZone.ClearVue();
         }
 
