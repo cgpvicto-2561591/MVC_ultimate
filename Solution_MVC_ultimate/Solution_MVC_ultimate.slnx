@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="bibli_controleur/Bibli_Controleur.csproj" />
+  <Project Path="bibli_interface/Bibli_Interface.csproj" />
+  <Project Path="bibli_modele/Bibli_Modele.csproj" />
+  <Project Path="MVC_ultimate/MVC_ultimate.csproj" />
+</Solution>

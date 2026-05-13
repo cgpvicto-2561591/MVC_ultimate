@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\bibli_interface\Bibli_Interface.csproj" />
+    <ProjectReference Include="..\bibli_modele\Bibli_Modele.csproj" />
+  </ItemGroup>
+
+</Project>
